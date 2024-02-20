@@ -1,5 +1,5 @@
 import { getServerSession } from 'next-auth';
-import { authOptions } from '../api/auth/[...nextauth]/route';
+import { authOptions } from '@/lib/auth/auth-options';
 import { getUserByEmail } from '@/lib/actions/user-actions';
 import UserDetails from '@/components/user/UserDetails';
 

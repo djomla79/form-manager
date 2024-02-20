@@ -59,18 +59,14 @@ const authOptions: AuthOptions = {
     async jwt({ token, user }) {
       if (user) {
         token = {
-          role: user.role,
           email: user.email,
-          username: user.username,
         };
       }
       return token;
     },
     async session({ session, token }) {
       session.user = {
-        role: token.role,
         email: token.email,
-        username: token.username,
       };
       return session;
     },
